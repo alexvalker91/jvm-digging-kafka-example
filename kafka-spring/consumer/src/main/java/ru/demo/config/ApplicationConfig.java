@@ -63,7 +63,7 @@ public class ApplicationConfig {
             listenerContainerFactory(ConsumerFactory<String, StringValue> consumerFactory) {
         var factory = new ConcurrentKafkaListenerContainerFactory<String, StringValue>();
         factory.setConsumerFactory(consumerFactory);
-        factory.setBatchListener(true);
+        factory.setBatchListener(true); // пачкай а не по одному "public void listen(@Payload List<StringValue> values) {"
         factory.setConcurrency(1);
         factory.getContainerProperties().setIdleBetweenPolls(1_000);
         factory.getContainerProperties().setPollTimeout(1_000);

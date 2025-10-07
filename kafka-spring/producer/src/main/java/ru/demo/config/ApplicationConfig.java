@@ -39,8 +39,8 @@ public class ApplicationConfig {
     public ProducerFactory<String, StringValue> producerFactory(
             KafkaProperties kafkaProperties, ObjectMapper mapper) {
         var props = kafkaProperties.buildProducerProperties();
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class); // сериализация для ключа
+        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class); // сериализация для значения
 
         var kafkaProducerFactory = new DefaultKafkaProducerFactory<String, StringValue>(props);
         kafkaProducerFactory.setValueSerializer(new JsonSerializer<>(mapper));

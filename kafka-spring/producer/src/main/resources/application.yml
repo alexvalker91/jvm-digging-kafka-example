@@ -5,7 +5,7 @@ application:
 spring:
   kafka:
     producer:
-      bootstrap-servers: "127.0.0.1:9092"
-      client-id: "demo-producer"
+      bootstrap-servers: "127.0.0.1:9092" # брокер к которому будем подключатся
+      client-id: "demo-producer" # идентификатор клиента, под которым будем подключатся
 
 

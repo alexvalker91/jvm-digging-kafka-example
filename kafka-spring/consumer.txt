@@ -1,0 +1,500 @@
+2:56:44 PM: Executing ':consumer:ru.demo.ConsumerApp.main()'…
+
+Starting Gradle Daemon...
+Gradle Daemon started in 2 s 433 ms
+> Task :consumer:compileJava
+> Task :consumer:processResources
+> Task :consumer:classes
+
+> Task :consumer:ru.demo.ConsumerApp.main()
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2025-10-07T14:57:13.912+03:00  INFO 32868 --- [           main] ru.demo.ConsumerApp                      : Starting ConsumerApp using Java 17.0.12 with PID 32868 (C:\Users\AliaksandrKreyer\Desktop\my\repositories\jvm-digging-kafka-example\kafka-spring\consumer\build\classes\java\main started by AliaksandrKreyer in C:\Users\AliaksandrKreyer\Desktop\my\repositories\jvm-digging-kafka-example\kafka-spring)
+2025-10-07T14:57:13.918+03:00  INFO 32868 --- [           main] ru.demo.ConsumerApp                      : No active profile set, falling back to 1 default profile: "default"
+2025-10-07T14:57:16.443+03:00  INFO 32868 --- [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values:
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id =
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-10-07T14:57:16.764+03:00  INFO 32868 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.3.2
+2025-10-07T14:57:16.767+03:00  INFO 32868 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: b66af662e61082cb
+2025-10-07T14:57:16.767+03:00  INFO 32868 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1759838236760
+2025-10-07T14:57:17.272+03:00  INFO 32868 --- [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2025-10-07T14:57:17.279+03:00  INFO 32868 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-10-07T14:57:17.280+03:00  INFO 32868 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-07T14:57:17.280+03:00  INFO 32868 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-10-07T14:57:17.324+03:00  INFO 32868 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values:
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = demo-consumer-0
+	client.rack =
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 3000
+	max.poll.records = 3
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-10-07T14:57:17.391+03:00  WARN 32868 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : These configurations '[spring.json.type.mapping]' were supplied but are not used yet.
+2025-10-07T14:57:17.391+03:00  INFO 32868 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.3.2
+2025-10-07T14:57:17.391+03:00  INFO 32868 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: b66af662e61082cb
+2025-10-07T14:57:17.391+03:00  INFO 32868 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1759838237391
+2025-10-07T14:57:17.394+03:00  INFO 32868 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=demo-consumer-0, groupId=test-group] Subscribed to topic(s): demo-topic
+2025-10-07T14:57:17.418+03:00  INFO 32868 --- [           main] ru.demo.ConsumerApp                      : Started ConsumerApp in 4.941 seconds (process running for 6.283)
+2025-10-07T14:57:17.432+03:00  INFO 32868 --- [   k-consumer-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=demo-consumer-0, groupId=test-group] Resetting the last seen epoch of partition demo-topic-0 to 0 since the associated topicId changed from null to 11JGA5CsSLuaoThIVVfuUA
+2025-10-07T14:57:17.434+03:00  INFO 32868 --- [   k-consumer-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=demo-consumer-0, groupId=test-group] Cluster ID: 6PmG3bxwTi65zywYpF_OEw
+2025-10-07T14:57:20.041+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=demo-consumer-0, groupId=test-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-10-07T14:57:20.046+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=demo-consumer-0, groupId=test-group] (Re-)joining group
+2025-10-07T14:57:20.103+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=demo-consumer-0, groupId=test-group] Request joining group due to: need to re-join with the given member-id: demo-consumer-0-81ddce9c-7a11-4063-8e69-af3ec7b38441
+2025-10-07T14:57:20.104+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=demo-consumer-0, groupId=test-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-10-07T14:57:20.104+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=demo-consumer-0, groupId=test-group] (Re-)joining group
+2025-10-07T14:57:23.138+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=demo-consumer-0, groupId=test-group] Successfully joined group with generation Generation{generationId=1, memberId='demo-consumer-0-81ddce9c-7a11-4063-8e69-af3ec7b38441', protocol='range'}
+2025-10-07T14:57:23.141+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=demo-consumer-0, groupId=test-group] Finished assignment for group at generation 1: {demo-consumer-0-81ddce9c-7a11-4063-8e69-af3ec7b38441=Assignment(partitions=[demo-topic-0])}
+2025-10-07T14:57:23.175+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=demo-consumer-0, groupId=test-group] Successfully synced group in generation Generation{generationId=1, memberId='demo-consumer-0-81ddce9c-7a11-4063-8e69-af3ec7b38441', protocol='range'}
+2025-10-07T14:57:23.176+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=demo-consumer-0, groupId=test-group] Notifying assignor about the new Assignment(partitions=[demo-topic-0])
+2025-10-07T14:57:23.179+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=demo-consumer-0, groupId=test-group] Adding newly assigned partitions: demo-topic-0
+2025-10-07T14:57:23.205+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=demo-consumer-0, groupId=test-group] Found no committed offset for partition demo-topic-0
+2025-10-07T14:57:23.235+03:00  INFO 32868 --- [   k-consumer-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=demo-consumer-0, groupId=test-group] Resetting offset for partition demo-topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2025-10-07T14:57:23.237+03:00  INFO 32868 --- [   k-consumer-1] o.s.k.l.KafkaMessageListenerContainer    : test-group: partitions assigned: [demo-topic-0]
+2025-10-07T14:57:23.456+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.457+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=1, value=stVal:1]
+2025-10-07T14:57:23.463+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=2, value=stVal:2]
+2025-10-07T14:57:23.464+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=3, value=stVal:3]
+2025-10-07T14:57:23.522+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.523+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=4, value=stVal:4]
+2025-10-07T14:57:23.523+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=5, value=stVal:5]
+2025-10-07T14:57:23.523+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=6, value=stVal:6]
+2025-10-07T14:57:23.533+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.533+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=7, value=stVal:7]
+2025-10-07T14:57:23.533+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=8, value=stVal:8]
+2025-10-07T14:57:23.533+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=9, value=stVal:9]
+2025-10-07T14:57:23.544+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.545+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=10, value=stVal:10]
+2025-10-07T14:57:23.545+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=11, value=stVal:11]
+2025-10-07T14:57:23.545+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=12, value=stVal:12]
+2025-10-07T14:57:23.554+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.554+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=13, value=stVal:13]
+2025-10-07T14:57:23.554+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=14, value=stVal:14]
+2025-10-07T14:57:23.554+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=15, value=stVal:15]
+2025-10-07T14:57:23.563+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.563+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=16, value=stVal:16]
+2025-10-07T14:57:23.563+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=17, value=stVal:17]
+2025-10-07T14:57:23.563+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=18, value=stVal:18]
+2025-10-07T14:57:23.572+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.573+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=19, value=stVal:19]
+2025-10-07T14:57:23.573+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=20, value=stVal:20]
+2025-10-07T14:57:23.573+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=21, value=stVal:21]
+2025-10-07T14:57:23.581+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.581+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=22, value=stVal:22]
+2025-10-07T14:57:23.581+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=23, value=stVal:23]
+2025-10-07T14:57:23.581+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=24, value=stVal:24]
+2025-10-07T14:57:23.590+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.590+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=25, value=stVal:25]
+2025-10-07T14:57:23.590+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=26, value=stVal:26]
+2025-10-07T14:57:23.590+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=27, value=stVal:27]
+2025-10-07T14:57:23.601+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.601+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=28, value=stVal:28]
+2025-10-07T14:57:23.601+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=29, value=stVal:29]
+2025-10-07T14:57:23.601+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=30, value=stVal:30]
+2025-10-07T14:57:23.613+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.614+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=31, value=stVal:31]
+2025-10-07T14:57:23.614+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=32, value=stVal:32]
+2025-10-07T14:57:23.614+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=33, value=stVal:33]
+2025-10-07T14:57:23.624+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.624+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=34, value=stVal:34]
+2025-10-07T14:57:23.624+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=35, value=stVal:35]
+2025-10-07T14:57:23.624+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=36, value=stVal:36]
+2025-10-07T14:57:23.632+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.632+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=37, value=stVal:37]
+2025-10-07T14:57:23.633+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=38, value=stVal:38]
+2025-10-07T14:57:23.633+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=39, value=stVal:39]
+2025-10-07T14:57:23.641+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.642+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=40, value=stVal:40]
+2025-10-07T14:57:23.642+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=41, value=stVal:41]
+2025-10-07T14:57:23.642+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=42, value=stVal:42]
+2025-10-07T14:57:23.651+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.651+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=43, value=stVal:43]
+2025-10-07T14:57:23.652+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=44, value=stVal:44]
+2025-10-07T14:57:23.652+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=45, value=stVal:45]
+2025-10-07T14:57:23.661+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.661+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=46, value=stVal:46]
+2025-10-07T14:57:23.661+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=47, value=stVal:47]
+2025-10-07T14:57:23.661+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=48, value=stVal:48]
+2025-10-07T14:57:23.670+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.670+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=49, value=stVal:49]
+2025-10-07T14:57:23.671+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=50, value=stVal:50]
+2025-10-07T14:57:23.671+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=51, value=stVal:51]
+2025-10-07T14:57:23.681+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.681+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=52, value=stVal:52]
+2025-10-07T14:57:23.681+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=53, value=stVal:53]
+2025-10-07T14:57:23.681+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=54, value=stVal:54]
+2025-10-07T14:57:23.690+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.691+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=55, value=stVal:55]
+2025-10-07T14:57:23.691+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=56, value=stVal:56]
+2025-10-07T14:57:23.691+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=57, value=stVal:57]
+2025-10-07T14:57:23.716+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.716+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=58, value=stVal:58]
+2025-10-07T14:57:23.716+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=59, value=stVal:59]
+2025-10-07T14:57:23.716+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=60, value=stVal:60]
+2025-10-07T14:57:23.730+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.731+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=61, value=stVal:61]
+2025-10-07T14:57:23.731+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=62, value=stVal:62]
+2025-10-07T14:57:23.731+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=63, value=stVal:63]
+2025-10-07T14:57:23.741+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.741+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=64, value=stVal:64]
+2025-10-07T14:57:23.741+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=65, value=stVal:65]
+2025-10-07T14:57:23.741+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=66, value=stVal:66]
+2025-10-07T14:57:23.750+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.750+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=67, value=stVal:67]
+2025-10-07T14:57:23.750+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=68, value=stVal:68]
+2025-10-07T14:57:23.750+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=69, value=stVal:69]
+2025-10-07T14:57:23.759+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.760+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=70, value=stVal:70]
+2025-10-07T14:57:23.760+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=71, value=stVal:71]
+2025-10-07T14:57:23.760+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=72, value=stVal:72]
+2025-10-07T14:57:23.771+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.772+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=73, value=stVal:73]
+2025-10-07T14:57:23.772+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=74, value=stVal:74]
+2025-10-07T14:57:23.772+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=75, value=stVal:75]
+2025-10-07T14:57:23.782+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.783+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=76, value=stVal:76]
+2025-10-07T14:57:23.783+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=77, value=stVal:77]
+2025-10-07T14:57:23.783+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=78, value=stVal:78]
+2025-10-07T14:57:23.792+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.792+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=79, value=stVal:79]
+2025-10-07T14:57:23.792+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=80, value=stVal:80]
+2025-10-07T14:57:23.792+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=81, value=stVal:81]
+2025-10-07T14:57:23.801+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.801+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=82, value=stVal:82]
+2025-10-07T14:57:23.801+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=83, value=stVal:83]
+2025-10-07T14:57:23.801+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=84, value=stVal:84]
+2025-10-07T14:57:23.811+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.812+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=85, value=stVal:85]
+2025-10-07T14:57:23.812+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=86, value=stVal:86]
+2025-10-07T14:57:23.812+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=87, value=stVal:87]
+2025-10-07T14:57:23.822+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.822+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=88, value=stVal:88]
+2025-10-07T14:57:23.822+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=89, value=stVal:89]
+2025-10-07T14:57:23.822+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=90, value=stVal:90]
+2025-10-07T14:57:23.832+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.833+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=91, value=stVal:91]
+2025-10-07T14:57:23.833+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=92, value=stVal:92]
+2025-10-07T14:57:23.833+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=93, value=stVal:93]
+2025-10-07T14:57:23.843+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.843+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=94, value=stVal:94]
+2025-10-07T14:57:23.843+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=95, value=stVal:95]
+2025-10-07T14:57:23.843+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=96, value=stVal:96]
+2025-10-07T14:57:23.855+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.855+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=97, value=stVal:97]
+2025-10-07T14:57:23.855+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=98, value=stVal:98]
+2025-10-07T14:57:23.855+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=99, value=stVal:99]
+2025-10-07T14:57:23.864+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.865+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=100, value=stVal:100]
+2025-10-07T14:57:23.865+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=101, value=stVal:101]
+2025-10-07T14:57:23.865+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=102, value=stVal:102]
+2025-10-07T14:57:23.875+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.876+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=103, value=stVal:103]
+2025-10-07T14:57:23.876+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=104, value=stVal:104]
+2025-10-07T14:57:23.876+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=105, value=stVal:105]
+2025-10-07T14:57:23.886+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.887+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=106, value=stVal:106]
+2025-10-07T14:57:23.887+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=107, value=stVal:107]
+2025-10-07T14:57:23.887+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=108, value=stVal:108]
+2025-10-07T14:57:23.896+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.896+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=109, value=stVal:109]
+2025-10-07T14:57:23.896+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=110, value=stVal:110]
+2025-10-07T14:57:23.896+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=111, value=stVal:111]
+2025-10-07T14:57:23.906+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.907+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=112, value=stVal:112]
+2025-10-07T14:57:23.907+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=113, value=stVal:113]
+2025-10-07T14:57:23.907+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=114, value=stVal:114]
+2025-10-07T14:57:23.915+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.916+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=115, value=stVal:115]
+2025-10-07T14:57:23.916+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=116, value=stVal:116]
+2025-10-07T14:57:23.916+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=117, value=stVal:117]
+2025-10-07T14:57:23.925+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.925+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=118, value=stVal:118]
+2025-10-07T14:57:23.925+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=119, value=stVal:119]
+2025-10-07T14:57:23.925+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=120, value=stVal:120]
+2025-10-07T14:57:23.933+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.933+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=121, value=stVal:121]
+2025-10-07T14:57:23.933+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=122, value=stVal:122]
+2025-10-07T14:57:23.933+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=123, value=stVal:123]
+2025-10-07T14:57:23.942+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.942+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=124, value=stVal:124]
+2025-10-07T14:57:23.942+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=125, value=stVal:125]
+2025-10-07T14:57:23.943+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=126, value=stVal:126]
+2025-10-07T14:57:23.952+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.952+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=127, value=stVal:127]
+2025-10-07T14:57:23.952+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=128, value=stVal:128]
+2025-10-07T14:57:23.952+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=129, value=stVal:129]
+2025-10-07T14:57:23.961+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.961+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=130, value=stVal:130]
+2025-10-07T14:57:23.961+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=131, value=stVal:131]
+2025-10-07T14:57:23.961+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=132, value=stVal:132]
+2025-10-07T14:57:23.971+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.971+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=133, value=stVal:133]
+2025-10-07T14:57:23.972+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=134, value=stVal:134]
+2025-10-07T14:57:23.972+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=135, value=stVal:135]
+2025-10-07T14:57:23.983+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.983+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=136, value=stVal:136]
+2025-10-07T14:57:23.984+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=137, value=stVal:137]
+2025-10-07T14:57:23.984+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=138, value=stVal:138]
+2025-10-07T14:57:23.994+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:23.994+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=139, value=stVal:139]
+2025-10-07T14:57:23.995+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=140, value=stVal:140]
+2025-10-07T14:57:23.995+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=141, value=stVal:141]
+2025-10-07T14:57:24.011+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.011+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=142, value=stVal:142]
+2025-10-07T14:57:24.011+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=143, value=stVal:143]
+2025-10-07T14:57:24.011+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=144, value=stVal:144]
+2025-10-07T14:57:24.025+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.026+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=145, value=stVal:145]
+2025-10-07T14:57:24.026+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=146, value=stVal:146]
+2025-10-07T14:57:24.026+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=147, value=stVal:147]
+2025-10-07T14:57:24.040+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.040+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=148, value=stVal:148]
+2025-10-07T14:57:24.040+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=149, value=stVal:149]
+2025-10-07T14:57:24.040+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=150, value=stVal:150]
+2025-10-07T14:57:24.051+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.052+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=151, value=stVal:151]
+2025-10-07T14:57:24.053+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=152, value=stVal:152]
+2025-10-07T14:57:24.053+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=153, value=stVal:153]
+2025-10-07T14:57:24.061+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.062+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=154, value=stVal:154]
+2025-10-07T14:57:24.062+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=155, value=stVal:155]
+2025-10-07T14:57:24.062+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=156, value=stVal:156]
+2025-10-07T14:57:24.073+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.074+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=157, value=stVal:157]
+2025-10-07T14:57:24.074+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=158, value=stVal:158]
+2025-10-07T14:57:24.074+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=159, value=stVal:159]
+2025-10-07T14:57:24.084+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.084+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=160, value=stVal:160]
+2025-10-07T14:57:24.084+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=161, value=stVal:161]
+2025-10-07T14:57:24.084+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=162, value=stVal:162]
+2025-10-07T14:57:24.098+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.098+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=163, value=stVal:163]
+2025-10-07T14:57:24.098+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=164, value=stVal:164]
+2025-10-07T14:57:24.098+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=165, value=stVal:165]
+2025-10-07T14:57:24.107+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.107+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=166, value=stVal:166]
+2025-10-07T14:57:24.107+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=167, value=stVal:167]
+2025-10-07T14:57:24.107+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=168, value=stVal:168]
+2025-10-07T14:57:24.127+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.128+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=169, value=stVal:169]
+2025-10-07T14:57:24.128+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=170, value=stVal:170]
+2025-10-07T14:57:24.128+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=171, value=stVal:171]
+2025-10-07T14:57:24.138+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.138+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=172, value=stVal:172]
+2025-10-07T14:57:24.138+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=173, value=stVal:173]
+2025-10-07T14:57:24.138+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=174, value=stVal:174]
+2025-10-07T14:57:24.145+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.146+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=175, value=stVal:175]
+2025-10-07T14:57:24.146+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=176, value=stVal:176]
+2025-10-07T14:57:24.146+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=177, value=stVal:177]
+2025-10-07T14:57:24.156+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.156+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=178, value=stVal:178]
+2025-10-07T14:57:24.156+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=179, value=stVal:179]
+2025-10-07T14:57:24.156+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=180, value=stVal:180]
+2025-10-07T14:57:24.166+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.166+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=181, value=stVal:181]
+2025-10-07T14:57:24.166+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=182, value=stVal:182]
+2025-10-07T14:57:24.166+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=183, value=stVal:183]
+2025-10-07T14:57:24.176+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.176+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=184, value=stVal:184]
+2025-10-07T14:57:24.176+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=185, value=stVal:185]
+2025-10-07T14:57:24.176+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=186, value=stVal:186]
+2025-10-07T14:57:24.187+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.188+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=187, value=stVal:187]
+2025-10-07T14:57:24.188+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=188, value=stVal:188]
+2025-10-07T14:57:24.188+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=189, value=stVal:189]
+2025-10-07T14:57:24.196+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.197+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=190, value=stVal:190]
+2025-10-07T14:57:24.197+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=191, value=stVal:191]
+2025-10-07T14:57:24.197+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=192, value=stVal:192]
+2025-10-07T14:57:24.206+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.206+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=193, value=stVal:193]
+2025-10-07T14:57:24.207+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=194, value=stVal:194]
+2025-10-07T14:57:24.207+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=195, value=stVal:195]
+2025-10-07T14:57:24.218+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.218+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=196, value=stVal:196]
+2025-10-07T14:57:24.219+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=197, value=stVal:197]
+2025-10-07T14:57:24.219+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=198, value=stVal:198]
+2025-10-07T14:57:24.228+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:3
+2025-10-07T14:57:24.228+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=199, value=stVal:199]
+2025-10-07T14:57:24.229+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=200, value=stVal:200]
+2025-10-07T14:57:24.229+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=201, value=stVal:201]
+2025-10-07T14:57:24.241+03:00  INFO 32868 --- [   k-consumer-1] ru.demo.config.ApplicationConfig         : values, values.size:1
+2025-10-07T14:57:24.241+03:00  INFO 32868 --- [   k-consumer-1] r.d.service.StringValueConsumerLogger    : log:StringValue[id=202, value=stVal:202]
+
+> Task :consumer:ru.demo.ConsumerApp.main() FAILED
+3 actionable tasks: 3 executed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':consumer:ru.demo.ConsumerApp.main()'.
+> Build cancelled while executing task ':consumer:ru.demo.ConsumerApp.main()'
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 46s
+2:57:31 PM: Execution finished ':consumer:ru.demo.ConsumerApp.main()'.

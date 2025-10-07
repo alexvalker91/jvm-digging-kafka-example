@@ -29,14 +29,14 @@ public class DataSenderKafka implements DataSender {
         try {
             log.info("value:{}", value);
             template.send(topic, value)
-                    .whenComplete(
+                    .whenComplete( // коллбэк, когда данные дойдут до брокера, брокер сообщит, что данные получил
                             (result, ex) -> {
                                 if (ex == null) {
                                     log.info(
                                             "message id:{} was sent, offset:{}",
                                             value.id(),
                                             result.getRecordMetadata().offset());
-                                    sendAsk.accept(value);
+                                    sendAsk.accept(value); // вызывает коллбэк, выполнит  какуюто бизнес логику
                                 } else {
                                     log.error("message id:{} was not sent", value.id(), ex);
                                 }

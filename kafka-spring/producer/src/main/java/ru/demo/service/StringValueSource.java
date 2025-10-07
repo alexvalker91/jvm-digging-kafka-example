@@ -18,6 +18,7 @@ public class StringValueSource implements ValueSource {
 
     @Override
     public void generate() {
+        // класический шедулер, который будет генерировать значения в одну секунду
         var executor = Executors.newScheduledThreadPool(1);
         executor.scheduleAtFixedRate(() -> valueConsumer.send(makeValue()), 0, 1, TimeUnit.SECONDS);
         log.info("generation started");

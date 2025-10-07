@@ -1,0 +1,820 @@
+2:52:50 PM: Executing ':producer:ru.demo.ProducerApp.main()'…
+
+Starting Gradle Daemon...
+Gradle Daemon started in 5 s 746 ms
+> Task :producer:compileJava
+> Task :producer:processResources
+> Task :producer:classes
+
+> Task :producer:ru.demo.ProducerApp.main()
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2025-10-07T14:53:44.536+03:00  INFO 41748 --- [           main] ru.demo.ProducerApp                      : Starting ProducerApp using Java 17.0.12 with PID 41748 (C:\Users\AliaksandrKreyer\Desktop\my\repositories\jvm-digging-kafka-example\kafka-spring\producer\build\classes\java\main started by AliaksandrKreyer in C:\Users\AliaksandrKreyer\Desktop\my\repositories\jvm-digging-kafka-example\kafka-spring)
+2025-10-07T14:53:44.543+03:00  INFO 41748 --- [           main] ru.demo.ProducerApp                      : No active profile set, falling back to 1 default profile: "default"
+2025-10-07T14:53:47.892+03:00  INFO 41748 --- [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values:
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id =
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-10-07T14:53:48.430+03:00  INFO 41748 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.3.2
+2025-10-07T14:53:48.433+03:00  INFO 41748 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: b66af662e61082cb
+2025-10-07T14:53:48.433+03:00  INFO 41748 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1759838028428
+2025-10-07T14:53:50.158+03:00  INFO 41748 --- [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2025-10-07T14:53:50.169+03:00  INFO 41748 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-10-07T14:53:50.170+03:00  INFO 41748 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-10-07T14:53:50.171+03:00  INFO 41748 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-10-07T14:53:50.201+03:00  INFO 41748 --- [           main] ru.demo.ProducerApp                      : Started ProducerApp in 6.653 seconds (process running for 7.436)
+2025-10-07T14:53:50.210+03:00  INFO 41748 --- [           main] ru.demo.service.StringValueSource        : generation started
+2025-10-07T14:53:50.228+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=1, value=stVal:1]
+2025-10-07T14:53:50.261+03:00  INFO 41748 --- [pool-1-thread-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values:
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [127.0.0.1:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = demo-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-10-07T14:53:50.283+03:00  INFO 41748 --- [pool-1-thread-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=demo-producer-1] Instantiated an idempotent producer.
+2025-10-07T14:53:50.318+03:00  INFO 41748 --- [pool-1-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.3.2
+2025-10-07T14:53:50.319+03:00  INFO 41748 --- [pool-1-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: b66af662e61082cb
+2025-10-07T14:53:50.319+03:00  INFO 41748 --- [pool-1-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1759838030318
+2025-10-07T14:53:50.361+03:00  INFO 41748 --- [demo-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=demo-producer-1] Resetting the last seen epoch of partition demo-topic-0 to 0 since the associated topicId changed from null to 11JGA5CsSLuaoThIVVfuUA
+2025-10-07T14:53:50.366+03:00  INFO 41748 --- [demo-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=demo-producer-1] Cluster ID: 6PmG3bxwTi65zywYpF_OEw
+2025-10-07T14:53:50.456+03:00  INFO 41748 --- [demo-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=demo-producer-1] ProducerId set to 0 with epoch 0
+2025-10-07T14:53:50.786+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:1 was sent, offset:0
+2025-10-07T14:53:50.787+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=1, value=stVal:1]
+2025-10-07T14:53:51.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=2, value=stVal:2]
+2025-10-07T14:53:51.239+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:2 was sent, offset:1
+2025-10-07T14:53:51.239+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=2, value=stVal:2]
+2025-10-07T14:53:52.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=3, value=stVal:3]
+2025-10-07T14:53:52.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:3 was sent, offset:2
+2025-10-07T14:53:52.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=3, value=stVal:3]
+2025-10-07T14:53:53.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=4, value=stVal:4]
+2025-10-07T14:53:53.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:4 was sent, offset:3
+2025-10-07T14:53:53.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=4, value=stVal:4]
+2025-10-07T14:53:54.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=5, value=stVal:5]
+2025-10-07T14:53:54.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:5 was sent, offset:4
+2025-10-07T14:53:54.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=5, value=stVal:5]
+2025-10-07T14:53:55.213+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=6, value=stVal:6]
+2025-10-07T14:53:55.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:6 was sent, offset:5
+2025-10-07T14:53:55.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=6, value=stVal:6]
+2025-10-07T14:53:56.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=7, value=stVal:7]
+2025-10-07T14:53:56.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:7 was sent, offset:6
+2025-10-07T14:53:56.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=7, value=stVal:7]
+2025-10-07T14:53:57.210+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=8, value=stVal:8]
+2025-10-07T14:53:57.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:8 was sent, offset:7
+2025-10-07T14:53:57.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=8, value=stVal:8]
+2025-10-07T14:53:58.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=9, value=stVal:9]
+2025-10-07T14:53:58.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:9 was sent, offset:8
+2025-10-07T14:53:58.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=9, value=stVal:9]
+2025-10-07T14:53:59.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=10, value=stVal:10]
+2025-10-07T14:53:59.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:10 was sent, offset:9
+2025-10-07T14:53:59.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=10, value=stVal:10]
+2025-10-07T14:54:00.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=11, value=stVal:11]
+2025-10-07T14:54:00.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:11 was sent, offset:10
+2025-10-07T14:54:00.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=11, value=stVal:11]
+2025-10-07T14:54:01.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=12, value=stVal:12]
+2025-10-07T14:54:01.234+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:12 was sent, offset:11
+2025-10-07T14:54:01.235+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=12, value=stVal:12]
+2025-10-07T14:54:02.223+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=13, value=stVal:13]
+2025-10-07T14:54:02.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:13 was sent, offset:12
+2025-10-07T14:54:02.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=13, value=stVal:13]
+2025-10-07T14:54:03.210+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=14, value=stVal:14]
+2025-10-07T14:54:03.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:14 was sent, offset:13
+2025-10-07T14:54:03.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=14, value=stVal:14]
+2025-10-07T14:54:04.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=15, value=stVal:15]
+2025-10-07T14:54:04.233+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:15 was sent, offset:14
+2025-10-07T14:54:04.233+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=15, value=stVal:15]
+2025-10-07T14:54:05.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=16, value=stVal:16]
+2025-10-07T14:54:05.233+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:16 was sent, offset:15
+2025-10-07T14:54:05.234+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=16, value=stVal:16]
+2025-10-07T14:54:06.225+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=17, value=stVal:17]
+2025-10-07T14:54:06.237+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:17 was sent, offset:16
+2025-10-07T14:54:06.237+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=17, value=stVal:17]
+2025-10-07T14:54:07.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=18, value=stVal:18]
+2025-10-07T14:54:07.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:18 was sent, offset:17
+2025-10-07T14:54:07.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=18, value=stVal:18]
+2025-10-07T14:54:08.219+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=19, value=stVal:19]
+2025-10-07T14:54:08.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:19 was sent, offset:18
+2025-10-07T14:54:08.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=19, value=stVal:19]
+2025-10-07T14:54:09.223+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=20, value=stVal:20]
+2025-10-07T14:54:09.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:20 was sent, offset:19
+2025-10-07T14:54:09.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=20, value=stVal:20]
+2025-10-07T14:54:10.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=21, value=stVal:21]
+2025-10-07T14:54:10.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:21 was sent, offset:20
+2025-10-07T14:54:10.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=21, value=stVal:21]
+2025-10-07T14:54:11.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=22, value=stVal:22]
+2025-10-07T14:54:11.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:22 was sent, offset:21
+2025-10-07T14:54:11.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=22, value=stVal:22]
+2025-10-07T14:54:12.218+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=23, value=stVal:23]
+2025-10-07T14:54:12.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:23 was sent, offset:22
+2025-10-07T14:54:12.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=23, value=stVal:23]
+2025-10-07T14:54:13.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=24, value=stVal:24]
+2025-10-07T14:54:13.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:24 was sent, offset:23
+2025-10-07T14:54:13.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=24, value=stVal:24]
+2025-10-07T14:54:14.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=25, value=stVal:25]
+2025-10-07T14:54:14.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:25 was sent, offset:24
+2025-10-07T14:54:14.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=25, value=stVal:25]
+2025-10-07T14:54:15.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=26, value=stVal:26]
+2025-10-07T14:54:15.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:26 was sent, offset:25
+2025-10-07T14:54:15.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=26, value=stVal:26]
+2025-10-07T14:54:16.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=27, value=stVal:27]
+2025-10-07T14:54:16.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:27 was sent, offset:26
+2025-10-07T14:54:16.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=27, value=stVal:27]
+2025-10-07T14:54:17.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=28, value=stVal:28]
+2025-10-07T14:54:17.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:28 was sent, offset:27
+2025-10-07T14:54:17.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=28, value=stVal:28]
+2025-10-07T14:54:18.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=29, value=stVal:29]
+2025-10-07T14:54:18.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:29 was sent, offset:28
+2025-10-07T14:54:18.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=29, value=stVal:29]
+2025-10-07T14:54:19.213+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=30, value=stVal:30]
+2025-10-07T14:54:19.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:30 was sent, offset:29
+2025-10-07T14:54:19.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=30, value=stVal:30]
+2025-10-07T14:54:20.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=31, value=stVal:31]
+2025-10-07T14:54:20.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:31 was sent, offset:30
+2025-10-07T14:54:20.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=31, value=stVal:31]
+2025-10-07T14:54:21.213+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=32, value=stVal:32]
+2025-10-07T14:54:21.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:32 was sent, offset:31
+2025-10-07T14:54:21.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=32, value=stVal:32]
+2025-10-07T14:54:22.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=33, value=stVal:33]
+2025-10-07T14:54:22.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:33 was sent, offset:32
+2025-10-07T14:54:22.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=33, value=stVal:33]
+2025-10-07T14:54:23.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=34, value=stVal:34]
+2025-10-07T14:54:23.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:34 was sent, offset:33
+2025-10-07T14:54:23.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=34, value=stVal:34]
+2025-10-07T14:54:24.213+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=35, value=stVal:35]
+2025-10-07T14:54:24.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:35 was sent, offset:34
+2025-10-07T14:54:24.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=35, value=stVal:35]
+2025-10-07T14:54:25.225+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=36, value=stVal:36]
+2025-10-07T14:54:25.233+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:36 was sent, offset:35
+2025-10-07T14:54:25.234+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=36, value=stVal:36]
+2025-10-07T14:54:26.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=37, value=stVal:37]
+2025-10-07T14:54:26.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:37 was sent, offset:36
+2025-10-07T14:54:26.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=37, value=stVal:37]
+2025-10-07T14:54:27.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=38, value=stVal:38]
+2025-10-07T14:54:27.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:38 was sent, offset:37
+2025-10-07T14:54:27.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=38, value=stVal:38]
+2025-10-07T14:54:28.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=39, value=stVal:39]
+2025-10-07T14:54:28.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:39 was sent, offset:38
+2025-10-07T14:54:28.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=39, value=stVal:39]
+2025-10-07T14:54:29.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=40, value=stVal:40]
+2025-10-07T14:54:29.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:40 was sent, offset:39
+2025-10-07T14:54:29.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=40, value=stVal:40]
+2025-10-07T14:54:30.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=41, value=stVal:41]
+2025-10-07T14:54:30.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:41 was sent, offset:40
+2025-10-07T14:54:30.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=41, value=stVal:41]
+2025-10-07T14:54:31.218+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=42, value=stVal:42]
+2025-10-07T14:54:31.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:42 was sent, offset:41
+2025-10-07T14:54:31.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=42, value=stVal:42]
+2025-10-07T14:54:32.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=43, value=stVal:43]
+2025-10-07T14:54:32.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:43 was sent, offset:42
+2025-10-07T14:54:32.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=43, value=stVal:43]
+2025-10-07T14:54:33.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=44, value=stVal:44]
+2025-10-07T14:54:33.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:44 was sent, offset:43
+2025-10-07T14:54:33.218+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=44, value=stVal:44]
+2025-10-07T14:54:34.219+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=45, value=stVal:45]
+2025-10-07T14:54:34.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:45 was sent, offset:44
+2025-10-07T14:54:34.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=45, value=stVal:45]
+2025-10-07T14:54:35.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=46, value=stVal:46]
+2025-10-07T14:54:35.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:46 was sent, offset:45
+2025-10-07T14:54:35.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=46, value=stVal:46]
+2025-10-07T14:54:36.218+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=47, value=stVal:47]
+2025-10-07T14:54:36.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:47 was sent, offset:46
+2025-10-07T14:54:36.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=47, value=stVal:47]
+2025-10-07T14:54:37.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=48, value=stVal:48]
+2025-10-07T14:54:37.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:48 was sent, offset:47
+2025-10-07T14:54:37.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=48, value=stVal:48]
+2025-10-07T14:54:38.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=49, value=stVal:49]
+2025-10-07T14:54:38.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:49 was sent, offset:48
+2025-10-07T14:54:38.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=49, value=stVal:49]
+2025-10-07T14:54:39.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=50, value=stVal:50]
+2025-10-07T14:54:39.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:50 was sent, offset:49
+2025-10-07T14:54:39.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=50, value=stVal:50]
+2025-10-07T14:54:40.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=51, value=stVal:51]
+2025-10-07T14:54:40.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:51 was sent, offset:50
+2025-10-07T14:54:40.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=51, value=stVal:51]
+2025-10-07T14:54:41.210+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=52, value=stVal:52]
+2025-10-07T14:54:41.218+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:52 was sent, offset:51
+2025-10-07T14:54:41.218+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=52, value=stVal:52]
+2025-10-07T14:54:42.219+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=53, value=stVal:53]
+2025-10-07T14:54:42.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:53 was sent, offset:52
+2025-10-07T14:54:42.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=53, value=stVal:53]
+2025-10-07T14:54:43.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=54, value=stVal:54]
+2025-10-07T14:54:43.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:54 was sent, offset:53
+2025-10-07T14:54:43.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=54, value=stVal:54]
+2025-10-07T14:54:44.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=55, value=stVal:55]
+2025-10-07T14:54:44.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:55 was sent, offset:54
+2025-10-07T14:54:44.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=55, value=stVal:55]
+2025-10-07T14:54:45.215+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=56, value=stVal:56]
+2025-10-07T14:54:45.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:56 was sent, offset:55
+2025-10-07T14:54:45.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=56, value=stVal:56]
+2025-10-07T14:54:46.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=57, value=stVal:57]
+2025-10-07T14:54:46.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:57 was sent, offset:56
+2025-10-07T14:54:46.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=57, value=stVal:57]
+2025-10-07T14:54:47.210+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=58, value=stVal:58]
+2025-10-07T14:54:47.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:58 was sent, offset:57
+2025-10-07T14:54:47.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=58, value=stVal:58]
+2025-10-07T14:54:48.223+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=59, value=stVal:59]
+2025-10-07T14:54:48.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:59 was sent, offset:58
+2025-10-07T14:54:48.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=59, value=stVal:59]
+2025-10-07T14:54:49.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=60, value=stVal:60]
+2025-10-07T14:54:49.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:60 was sent, offset:59
+2025-10-07T14:54:49.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=60, value=stVal:60]
+2025-10-07T14:54:50.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=61, value=stVal:61]
+2025-10-07T14:54:50.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:61 was sent, offset:60
+2025-10-07T14:54:50.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=61, value=stVal:61]
+2025-10-07T14:54:51.223+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=62, value=stVal:62]
+2025-10-07T14:54:51.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:62 was sent, offset:61
+2025-10-07T14:54:51.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=62, value=stVal:62]
+2025-10-07T14:54:52.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=63, value=stVal:63]
+2025-10-07T14:54:52.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:63 was sent, offset:62
+2025-10-07T14:54:52.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=63, value=stVal:63]
+2025-10-07T14:54:53.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=64, value=stVal:64]
+2025-10-07T14:54:53.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:64 was sent, offset:63
+2025-10-07T14:54:53.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=64, value=stVal:64]
+2025-10-07T14:54:54.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=65, value=stVal:65]
+2025-10-07T14:54:54.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:65 was sent, offset:64
+2025-10-07T14:54:54.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=65, value=stVal:65]
+2025-10-07T14:54:55.225+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=66, value=stVal:66]
+2025-10-07T14:54:55.233+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:66 was sent, offset:65
+2025-10-07T14:54:55.234+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=66, value=stVal:66]
+2025-10-07T14:54:56.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=67, value=stVal:67]
+2025-10-07T14:54:56.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:67 was sent, offset:66
+2025-10-07T14:54:56.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=67, value=stVal:67]
+2025-10-07T14:54:57.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=68, value=stVal:68]
+2025-10-07T14:54:57.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:68 was sent, offset:67
+2025-10-07T14:54:57.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=68, value=stVal:68]
+2025-10-07T14:54:58.219+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=69, value=stVal:69]
+2025-10-07T14:54:58.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:69 was sent, offset:68
+2025-10-07T14:54:58.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=69, value=stVal:69]
+2025-10-07T14:54:59.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=70, value=stVal:70]
+2025-10-07T14:54:59.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:70 was sent, offset:69
+2025-10-07T14:54:59.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=70, value=stVal:70]
+2025-10-07T14:55:00.215+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=71, value=stVal:71]
+2025-10-07T14:55:00.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:71 was sent, offset:70
+2025-10-07T14:55:00.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=71, value=stVal:71]
+2025-10-07T14:55:01.223+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=72, value=stVal:72]
+2025-10-07T14:55:01.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:72 was sent, offset:71
+2025-10-07T14:55:01.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=72, value=stVal:72]
+2025-10-07T14:55:02.210+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=73, value=stVal:73]
+2025-10-07T14:55:02.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:73 was sent, offset:72
+2025-10-07T14:55:02.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=73, value=stVal:73]
+2025-10-07T14:55:03.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=74, value=stVal:74]
+2025-10-07T14:55:03.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:74 was sent, offset:73
+2025-10-07T14:55:03.232+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=74, value=stVal:74]
+2025-10-07T14:55:04.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=75, value=stVal:75]
+2025-10-07T14:55:04.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:75 was sent, offset:74
+2025-10-07T14:55:04.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=75, value=stVal:75]
+2025-10-07T14:55:05.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=76, value=stVal:76]
+2025-10-07T14:55:05.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:76 was sent, offset:75
+2025-10-07T14:55:05.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=76, value=stVal:76]
+2025-10-07T14:55:06.225+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=77, value=stVal:77]
+2025-10-07T14:55:06.236+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:77 was sent, offset:76
+2025-10-07T14:55:06.236+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=77, value=stVal:77]
+2025-10-07T14:55:07.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=78, value=stVal:78]
+2025-10-07T14:55:07.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:78 was sent, offset:77
+2025-10-07T14:55:07.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=78, value=stVal:78]
+2025-10-07T14:55:08.218+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=79, value=stVal:79]
+2025-10-07T14:55:08.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:79 was sent, offset:78
+2025-10-07T14:55:08.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=79, value=stVal:79]
+2025-10-07T14:55:09.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=80, value=stVal:80]
+2025-10-07T14:55:09.243+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:80 was sent, offset:79
+2025-10-07T14:55:09.243+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=80, value=stVal:80]
+2025-10-07T14:55:10.213+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=81, value=stVal:81]
+2025-10-07T14:55:10.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:81 was sent, offset:80
+2025-10-07T14:55:10.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=81, value=stVal:81]
+2025-10-07T14:55:11.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=82, value=stVal:82]
+2025-10-07T14:55:11.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:82 was sent, offset:81
+2025-10-07T14:55:11.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=82, value=stVal:82]
+2025-10-07T14:55:12.223+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=83, value=stVal:83]
+2025-10-07T14:55:12.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:83 was sent, offset:82
+2025-10-07T14:55:12.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=83, value=stVal:83]
+2025-10-07T14:55:13.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=84, value=stVal:84]
+2025-10-07T14:55:13.232+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:84 was sent, offset:83
+2025-10-07T14:55:13.232+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=84, value=stVal:84]
+2025-10-07T14:55:14.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=85, value=stVal:85]
+2025-10-07T14:55:14.233+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:85 was sent, offset:84
+2025-10-07T14:55:14.233+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=85, value=stVal:85]
+2025-10-07T14:55:15.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=86, value=stVal:86]
+2025-10-07T14:55:15.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:86 was sent, offset:85
+2025-10-07T14:55:15.232+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=86, value=stVal:86]
+2025-10-07T14:55:16.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=87, value=stVal:87]
+2025-10-07T14:55:16.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:87 was sent, offset:86
+2025-10-07T14:55:16.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=87, value=stVal:87]
+2025-10-07T14:55:17.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=88, value=stVal:88]
+2025-10-07T14:55:17.218+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:88 was sent, offset:87
+2025-10-07T14:55:17.218+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=88, value=stVal:88]
+2025-10-07T14:55:18.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=89, value=stVal:89]
+2025-10-07T14:55:18.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:89 was sent, offset:88
+2025-10-07T14:55:18.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=89, value=stVal:89]
+2025-10-07T14:55:19.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=90, value=stVal:90]
+2025-10-07T14:55:19.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:90 was sent, offset:89
+2025-10-07T14:55:19.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=90, value=stVal:90]
+2025-10-07T14:55:20.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=91, value=stVal:91]
+2025-10-07T14:55:20.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:91 was sent, offset:90
+2025-10-07T14:55:20.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=91, value=stVal:91]
+2025-10-07T14:55:21.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=92, value=stVal:92]
+2025-10-07T14:55:21.240+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:92 was sent, offset:91
+2025-10-07T14:55:21.240+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=92, value=stVal:92]
+2025-10-07T14:55:22.210+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=93, value=stVal:93]
+2025-10-07T14:55:22.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:93 was sent, offset:92
+2025-10-07T14:55:22.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=93, value=stVal:93]
+2025-10-07T14:55:23.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=94, value=stVal:94]
+2025-10-07T14:55:23.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:94 was sent, offset:93
+2025-10-07T14:55:23.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=94, value=stVal:94]
+2025-10-07T14:55:24.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=95, value=stVal:95]
+2025-10-07T14:55:24.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:95 was sent, offset:94
+2025-10-07T14:55:24.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=95, value=stVal:95]
+2025-10-07T14:55:25.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=96, value=stVal:96]
+2025-10-07T14:55:25.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:96 was sent, offset:95
+2025-10-07T14:55:25.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=96, value=stVal:96]
+2025-10-07T14:55:26.210+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=97, value=stVal:97]
+2025-10-07T14:55:26.218+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:97 was sent, offset:96
+2025-10-07T14:55:26.218+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=97, value=stVal:97]
+2025-10-07T14:55:27.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=98, value=stVal:98]
+2025-10-07T14:55:27.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:98 was sent, offset:97
+2025-10-07T14:55:27.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=98, value=stVal:98]
+2025-10-07T14:55:28.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=99, value=stVal:99]
+2025-10-07T14:55:28.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:99 was sent, offset:98
+2025-10-07T14:55:28.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=99, value=stVal:99]
+2025-10-07T14:55:29.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=100, value=stVal:100]
+2025-10-07T14:55:29.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:100 was sent, offset:99
+2025-10-07T14:55:29.227+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=100, value=stVal:100]
+2025-10-07T14:55:30.223+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=101, value=stVal:101]
+2025-10-07T14:55:30.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:101 was sent, offset:100
+2025-10-07T14:55:30.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=101, value=stVal:101]
+2025-10-07T14:55:31.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=102, value=stVal:102]
+2025-10-07T14:55:31.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:102 was sent, offset:101
+2025-10-07T14:55:31.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=102, value=stVal:102]
+2025-10-07T14:55:32.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=103, value=stVal:103]
+2025-10-07T14:55:32.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:103 was sent, offset:102
+2025-10-07T14:55:32.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=103, value=stVal:103]
+2025-10-07T14:55:33.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=104, value=stVal:104]
+2025-10-07T14:55:33.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:104 was sent, offset:103
+2025-10-07T14:55:33.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=104, value=stVal:104]
+2025-10-07T14:55:34.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=105, value=stVal:105]
+2025-10-07T14:55:34.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:105 was sent, offset:104
+2025-10-07T14:55:34.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=105, value=stVal:105]
+2025-10-07T14:55:35.215+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=106, value=stVal:106]
+2025-10-07T14:55:35.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:106 was sent, offset:105
+2025-10-07T14:55:35.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=106, value=stVal:106]
+2025-10-07T14:55:36.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=107, value=stVal:107]
+2025-10-07T14:55:36.218+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:107 was sent, offset:106
+2025-10-07T14:55:36.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=107, value=stVal:107]
+2025-10-07T14:55:37.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=108, value=stVal:108]
+2025-10-07T14:55:37.216+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:108 was sent, offset:107
+2025-10-07T14:55:37.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=108, value=stVal:108]
+2025-10-07T14:55:38.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=109, value=stVal:109]
+2025-10-07T14:55:38.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:109 was sent, offset:108
+2025-10-07T14:55:38.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=109, value=stVal:109]
+2025-10-07T14:55:39.221+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=110, value=stVal:110]
+2025-10-07T14:55:39.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:110 was sent, offset:109
+2025-10-07T14:55:39.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=110, value=stVal:110]
+2025-10-07T14:55:40.219+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=111, value=stVal:111]
+2025-10-07T14:55:40.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:111 was sent, offset:110
+2025-10-07T14:55:40.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=111, value=stVal:111]
+2025-10-07T14:55:41.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=112, value=stVal:112]
+2025-10-07T14:55:41.232+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:112 was sent, offset:111
+2025-10-07T14:55:41.232+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=112, value=stVal:112]
+2025-10-07T14:55:42.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=113, value=stVal:113]
+2025-10-07T14:55:42.218+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:113 was sent, offset:112
+2025-10-07T14:55:42.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=113, value=stVal:113]
+2025-10-07T14:55:43.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=114, value=stVal:114]
+2025-10-07T14:55:43.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:114 was sent, offset:113
+2025-10-07T14:55:43.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=114, value=stVal:114]
+2025-10-07T14:55:44.215+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=115, value=stVal:115]
+2025-10-07T14:55:44.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:115 was sent, offset:114
+2025-10-07T14:55:44.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=115, value=stVal:115]
+2025-10-07T14:55:45.215+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=116, value=stVal:116]
+2025-10-07T14:55:45.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:116 was sent, offset:115
+2025-10-07T14:55:45.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=116, value=stVal:116]
+2025-10-07T14:55:46.213+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=117, value=stVal:117]
+2025-10-07T14:55:46.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:117 was sent, offset:116
+2025-10-07T14:55:46.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=117, value=stVal:117]
+2025-10-07T14:55:47.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=118, value=stVal:118]
+2025-10-07T14:55:47.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:118 was sent, offset:117
+2025-10-07T14:55:47.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=118, value=stVal:118]
+2025-10-07T14:55:48.221+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=119, value=stVal:119]
+2025-10-07T14:55:48.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:119 was sent, offset:118
+2025-10-07T14:55:48.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=119, value=stVal:119]
+2025-10-07T14:55:49.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=120, value=stVal:120]
+2025-10-07T14:55:49.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:120 was sent, offset:119
+2025-10-07T14:55:49.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=120, value=stVal:120]
+2025-10-07T14:55:50.215+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=121, value=stVal:121]
+2025-10-07T14:55:50.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:121 was sent, offset:120
+2025-10-07T14:55:50.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=121, value=stVal:121]
+2025-10-07T14:55:51.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=122, value=stVal:122]
+2025-10-07T14:55:51.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:122 was sent, offset:121
+2025-10-07T14:55:51.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=122, value=stVal:122]
+2025-10-07T14:55:52.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=123, value=stVal:123]
+2025-10-07T14:55:52.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:123 was sent, offset:122
+2025-10-07T14:55:52.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=123, value=stVal:123]
+2025-10-07T14:55:53.215+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=124, value=stVal:124]
+2025-10-07T14:55:53.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:124 was sent, offset:123
+2025-10-07T14:55:53.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=124, value=stVal:124]
+2025-10-07T14:55:54.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=125, value=stVal:125]
+2025-10-07T14:55:54.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:125 was sent, offset:124
+2025-10-07T14:55:54.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=125, value=stVal:125]
+2025-10-07T14:55:55.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=126, value=stVal:126]
+2025-10-07T14:55:55.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:126 was sent, offset:125
+2025-10-07T14:55:55.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=126, value=stVal:126]
+2025-10-07T14:55:56.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=127, value=stVal:127]
+2025-10-07T14:55:56.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:127 was sent, offset:126
+2025-10-07T14:55:56.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=127, value=stVal:127]
+2025-10-07T14:55:57.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=128, value=stVal:128]
+2025-10-07T14:55:57.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:128 was sent, offset:127
+2025-10-07T14:55:57.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=128, value=stVal:128]
+2025-10-07T14:55:58.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=129, value=stVal:129]
+2025-10-07T14:55:58.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:129 was sent, offset:128
+2025-10-07T14:55:58.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=129, value=stVal:129]
+2025-10-07T14:55:59.213+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=130, value=stVal:130]
+2025-10-07T14:55:59.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:130 was sent, offset:129
+2025-10-07T14:55:59.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=130, value=stVal:130]
+2025-10-07T14:56:00.219+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=131, value=stVal:131]
+2025-10-07T14:56:00.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:131 was sent, offset:130
+2025-10-07T14:56:00.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=131, value=stVal:131]
+2025-10-07T14:56:01.223+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=132, value=stVal:132]
+2025-10-07T14:56:01.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:132 was sent, offset:131
+2025-10-07T14:56:01.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=132, value=stVal:132]
+2025-10-07T14:56:02.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=133, value=stVal:133]
+2025-10-07T14:56:02.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:133 was sent, offset:132
+2025-10-07T14:56:02.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=133, value=stVal:133]
+2025-10-07T14:56:03.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=134, value=stVal:134]
+2025-10-07T14:56:03.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:134 was sent, offset:133
+2025-10-07T14:56:03.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=134, value=stVal:134]
+2025-10-07T14:56:04.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=135, value=stVal:135]
+2025-10-07T14:56:04.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:135 was sent, offset:134
+2025-10-07T14:56:04.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=135, value=stVal:135]
+2025-10-07T14:56:05.218+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=136, value=stVal:136]
+2025-10-07T14:56:05.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:136 was sent, offset:135
+2025-10-07T14:56:05.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=136, value=stVal:136]
+2025-10-07T14:56:06.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=137, value=stVal:137]
+2025-10-07T14:56:06.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:137 was sent, offset:136
+2025-10-07T14:56:06.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=137, value=stVal:137]
+2025-10-07T14:56:07.213+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=138, value=stVal:138]
+2025-10-07T14:56:07.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:138 was sent, offset:137
+2025-10-07T14:56:07.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=138, value=stVal:138]
+2025-10-07T14:56:08.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=139, value=stVal:139]
+2025-10-07T14:56:08.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:139 was sent, offset:138
+2025-10-07T14:56:08.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=139, value=stVal:139]
+2025-10-07T14:56:09.225+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=140, value=stVal:140]
+2025-10-07T14:56:09.233+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:140 was sent, offset:139
+2025-10-07T14:56:09.233+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=140, value=stVal:140]
+2025-10-07T14:56:10.213+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=141, value=stVal:141]
+2025-10-07T14:56:10.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:141 was sent, offset:140
+2025-10-07T14:56:10.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=141, value=stVal:141]
+2025-10-07T14:56:11.210+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=142, value=stVal:142]
+2025-10-07T14:56:11.215+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:142 was sent, offset:141
+2025-10-07T14:56:11.215+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=142, value=stVal:142]
+2025-10-07T14:56:12.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=143, value=stVal:143]
+2025-10-07T14:56:12.225+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:143 was sent, offset:142
+2025-10-07T14:56:12.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=143, value=stVal:143]
+2025-10-07T14:56:13.223+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=144, value=stVal:144]
+2025-10-07T14:56:13.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:144 was sent, offset:143
+2025-10-07T14:56:13.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=144, value=stVal:144]
+2025-10-07T14:56:14.218+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=145, value=stVal:145]
+2025-10-07T14:56:14.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:145 was sent, offset:144
+2025-10-07T14:56:14.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=145, value=stVal:145]
+2025-10-07T14:56:15.218+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=146, value=stVal:146]
+2025-10-07T14:56:15.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:146 was sent, offset:145
+2025-10-07T14:56:15.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=146, value=stVal:146]
+2025-10-07T14:56:16.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=147, value=stVal:147]
+2025-10-07T14:56:16.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:147 was sent, offset:146
+2025-10-07T14:56:16.218+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=147, value=stVal:147]
+2025-10-07T14:56:17.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=148, value=stVal:148]
+2025-10-07T14:56:17.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:148 was sent, offset:147
+2025-10-07T14:56:17.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=148, value=stVal:148]
+2025-10-07T14:56:18.219+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=149, value=stVal:149]
+2025-10-07T14:56:18.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:149 was sent, offset:148
+2025-10-07T14:56:18.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=149, value=stVal:149]
+2025-10-07T14:56:19.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=150, value=stVal:150]
+2025-10-07T14:56:19.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:150 was sent, offset:149
+2025-10-07T14:56:19.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=150, value=stVal:150]
+2025-10-07T14:56:20.215+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=151, value=stVal:151]
+2025-10-07T14:56:20.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:151 was sent, offset:150
+2025-10-07T14:56:20.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=151, value=stVal:151]
+2025-10-07T14:56:21.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=152, value=stVal:152]
+2025-10-07T14:56:21.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:152 was sent, offset:151
+2025-10-07T14:56:21.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=152, value=stVal:152]
+2025-10-07T14:56:22.223+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=153, value=stVal:153]
+2025-10-07T14:56:22.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:153 was sent, offset:152
+2025-10-07T14:56:22.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=153, value=stVal:153]
+2025-10-07T14:56:23.218+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=154, value=stVal:154]
+2025-10-07T14:56:23.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:154 was sent, offset:153
+2025-10-07T14:56:23.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=154, value=stVal:154]
+2025-10-07T14:56:24.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=155, value=stVal:155]
+2025-10-07T14:56:24.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:155 was sent, offset:154
+2025-10-07T14:56:24.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=155, value=stVal:155]
+2025-10-07T14:56:25.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=156, value=stVal:156]
+2025-10-07T14:56:25.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:156 was sent, offset:155
+2025-10-07T14:56:25.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=156, value=stVal:156]
+2025-10-07T14:56:26.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=157, value=stVal:157]
+2025-10-07T14:56:26.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:157 was sent, offset:156
+2025-10-07T14:56:26.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=157, value=stVal:157]
+2025-10-07T14:56:27.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=158, value=stVal:158]
+2025-10-07T14:56:27.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:158 was sent, offset:157
+2025-10-07T14:56:27.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=158, value=stVal:158]
+2025-10-07T14:56:28.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=159, value=stVal:159]
+2025-10-07T14:56:28.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:159 was sent, offset:158
+2025-10-07T14:56:28.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=159, value=stVal:159]
+2025-10-07T14:56:29.226+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=160, value=stVal:160]
+2025-10-07T14:56:29.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:160 was sent, offset:159
+2025-10-07T14:56:29.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=160, value=stVal:160]
+2025-10-07T14:56:30.210+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=161, value=stVal:161]
+2025-10-07T14:56:30.215+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:161 was sent, offset:160
+2025-10-07T14:56:30.215+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=161, value=stVal:161]
+2025-10-07T14:56:31.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=162, value=stVal:162]
+2025-10-07T14:56:31.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:162 was sent, offset:161
+2025-10-07T14:56:31.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=162, value=stVal:162]
+2025-10-07T14:56:32.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=163, value=stVal:163]
+2025-10-07T14:56:32.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:163 was sent, offset:162
+2025-10-07T14:56:32.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=163, value=stVal:163]
+2025-10-07T14:56:33.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=164, value=stVal:164]
+2025-10-07T14:56:33.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:164 was sent, offset:163
+2025-10-07T14:56:33.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=164, value=stVal:164]
+2025-10-07T14:56:34.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=165, value=stVal:165]
+2025-10-07T14:56:34.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:165 was sent, offset:164
+2025-10-07T14:56:34.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=165, value=stVal:165]
+2025-10-07T14:56:35.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=166, value=stVal:166]
+2025-10-07T14:56:35.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:166 was sent, offset:165
+2025-10-07T14:56:35.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=166, value=stVal:166]
+2025-10-07T14:56:36.219+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=167, value=stVal:167]
+2025-10-07T14:56:36.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:167 was sent, offset:166
+2025-10-07T14:56:36.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=167, value=stVal:167]
+2025-10-07T14:56:37.225+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=168, value=stVal:168]
+2025-10-07T14:56:37.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:168 was sent, offset:167
+2025-10-07T14:56:37.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=168, value=stVal:168]
+2025-10-07T14:56:38.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=169, value=stVal:169]
+2025-10-07T14:56:38.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:169 was sent, offset:168
+2025-10-07T14:56:38.217+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=169, value=stVal:169]
+2025-10-07T14:56:39.217+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=170, value=stVal:170]
+2025-10-07T14:56:39.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:170 was sent, offset:169
+2025-10-07T14:56:39.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=170, value=stVal:170]
+2025-10-07T14:56:40.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=171, value=stVal:171]
+2025-10-07T14:56:40.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:171 was sent, offset:170
+2025-10-07T14:56:40.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=171, value=stVal:171]
+2025-10-07T14:56:41.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=172, value=stVal:172]
+2025-10-07T14:56:41.239+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:172 was sent, offset:171
+2025-10-07T14:56:41.239+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=172, value=stVal:172]
+2025-10-07T14:56:42.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=173, value=stVal:173]
+2025-10-07T14:56:42.232+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:173 was sent, offset:172
+2025-10-07T14:56:42.233+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=173, value=stVal:173]
+2025-10-07T14:56:43.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=174, value=stVal:174]
+2025-10-07T14:56:43.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:174 was sent, offset:173
+2025-10-07T14:56:43.221+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=174, value=stVal:174]
+2025-10-07T14:56:44.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=175, value=stVal:175]
+2025-10-07T14:56:44.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:175 was sent, offset:174
+2025-10-07T14:56:44.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=175, value=stVal:175]
+2025-10-07T14:56:45.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=176, value=stVal:176]
+2025-10-07T14:56:45.234+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:176 was sent, offset:175
+2025-10-07T14:56:45.234+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=176, value=stVal:176]
+2025-10-07T14:56:46.289+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=177, value=stVal:177]
+2025-10-07T14:56:46.361+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:177 was sent, offset:176
+2025-10-07T14:56:46.361+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=177, value=stVal:177]
+2025-10-07T14:56:47.213+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=178, value=stVal:178]
+2025-10-07T14:56:47.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:178 was sent, offset:177
+2025-10-07T14:56:47.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=178, value=stVal:178]
+2025-10-07T14:56:48.220+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=179, value=stVal:179]
+2025-10-07T14:56:48.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:179 was sent, offset:178
+2025-10-07T14:56:48.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=179, value=stVal:179]
+2025-10-07T14:56:49.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=180, value=stVal:180]
+2025-10-07T14:56:49.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:180 was sent, offset:179
+2025-10-07T14:56:49.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=180, value=stVal:180]
+2025-10-07T14:56:50.216+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=181, value=stVal:181]
+2025-10-07T14:56:50.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:181 was sent, offset:180
+2025-10-07T14:56:50.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=181, value=stVal:181]
+2025-10-07T14:56:51.215+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=182, value=stVal:182]
+2025-10-07T14:56:51.238+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:182 was sent, offset:181
+2025-10-07T14:56:51.238+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=182, value=stVal:182]
+2025-10-07T14:56:52.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=183, value=stVal:183]
+2025-10-07T14:56:52.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:183 was sent, offset:182
+2025-10-07T14:56:52.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=183, value=stVal:183]
+2025-10-07T14:56:53.225+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=184, value=stVal:184]
+2025-10-07T14:56:53.234+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:184 was sent, offset:183
+2025-10-07T14:56:53.234+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=184, value=stVal:184]
+2025-10-07T14:56:54.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=185, value=stVal:185]
+2025-10-07T14:56:54.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:185 was sent, offset:184
+2025-10-07T14:56:54.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=185, value=stVal:185]
+2025-10-07T14:56:55.218+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=186, value=stVal:186]
+2025-10-07T14:56:55.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:186 was sent, offset:185
+2025-10-07T14:56:55.228+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=186, value=stVal:186]
+2025-10-07T14:56:56.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=187, value=stVal:187]
+2025-10-07T14:56:56.278+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:187 was sent, offset:186
+2025-10-07T14:56:56.279+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=187, value=stVal:187]
+2025-10-07T14:56:57.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=188, value=stVal:188]
+2025-10-07T14:56:57.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:188 was sent, offset:187
+2025-10-07T14:56:57.223+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=188, value=stVal:188]
+2025-10-07T14:56:58.224+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=189, value=stVal:189]
+2025-10-07T14:56:58.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:189 was sent, offset:188
+2025-10-07T14:56:58.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=189, value=stVal:189]
+2025-10-07T14:56:59.221+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=190, value=stVal:190]
+2025-10-07T14:56:59.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:190 was sent, offset:189
+2025-10-07T14:56:59.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=190, value=stVal:190]
+2025-10-07T14:57:00.213+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=191, value=stVal:191]
+2025-10-07T14:57:00.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:191 was sent, offset:190
+2025-10-07T14:57:00.220+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=191, value=stVal:191]
+2025-10-07T14:57:01.211+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=192, value=stVal:192]
+2025-10-07T14:57:01.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:192 was sent, offset:191
+2025-10-07T14:57:01.222+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=192, value=stVal:192]
+2025-10-07T14:57:02.230+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=193, value=stVal:193]
+2025-10-07T14:57:02.242+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:193 was sent, offset:192
+2025-10-07T14:57:02.242+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=193, value=stVal:193]
+2025-10-07T14:57:03.212+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=194, value=stVal:194]
+2025-10-07T14:57:03.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:194 was sent, offset:193
+2025-10-07T14:57:03.219+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=194, value=stVal:194]
+2025-10-07T14:57:04.215+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=195, value=stVal:195]
+2025-10-07T14:57:04.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:195 was sent, offset:194
+2025-10-07T14:57:04.229+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=195, value=stVal:195]
+2025-10-07T14:57:05.223+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=196, value=stVal:196]
+2025-10-07T14:57:05.231+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:196 was sent, offset:195
+2025-10-07T14:57:05.232+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=196, value=stVal:196]
+2025-10-07T14:57:06.222+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=197, value=stVal:197]
+2025-10-07T14:57:06.238+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:197 was sent, offset:196
+2025-10-07T14:57:06.238+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=197, value=stVal:197]
+2025-10-07T14:57:07.218+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=198, value=stVal:198]
+2025-10-07T14:57:07.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:198 was sent, offset:197
+2025-10-07T14:57:07.230+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=198, value=stVal:198]
+2025-10-07T14:57:08.234+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=199, value=stVal:199]
+2025-10-07T14:57:08.256+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:199 was sent, offset:198
+2025-10-07T14:57:08.256+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=199, value=stVal:199]
+2025-10-07T14:57:09.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=200, value=stVal:200]
+2025-10-07T14:57:09.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:200 was sent, offset:199
+2025-10-07T14:57:09.226+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=200, value=stVal:200]
+2025-10-07T14:57:10.225+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=201, value=stVal:201]
+2025-10-07T14:57:10.233+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:201 was sent, offset:200
+2025-10-07T14:57:10.234+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=201, value=stVal:201]
+2025-10-07T14:57:11.214+03:00  INFO 41748 --- [pool-1-thread-1] ru.demo.service.DataSenderKafka          : value:StringValue[id=202, value=stVal:202]
+2025-10-07T14:57:11.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.service.DataSenderKafka          : message id:202 was sent, offset:201
+2025-10-07T14:57:11.224+03:00  INFO 41748 --- [demo-producer-1] ru.demo.config.ApplicationConfig         : asked, value:StringValue[id=202, value=stVal:202]
+
+> Task :producer:ru.demo.ProducerApp.main() FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':producer:ru.demo.ProducerApp.main()'.
+> Build cancelled while executing task ':producer:ru.demo.ProducerApp.main()'
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 4m 20s
+3 actionable tasks: 3 executed
+2:57:12 PM: Execution finished ':producer:ru.demo.ProducerApp.main()'.
